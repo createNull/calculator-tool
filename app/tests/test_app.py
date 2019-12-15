@@ -7,7 +7,7 @@ def test_fibonacci(test_input, expected):
     assert fibonacci(test_input) == expected
 
 
-@mark.parametrize("test_input_1,test_input_2,expected", [(0, 3, 4), (2, 0, 3)])
+@mark.parametrize("test_input_1,test_input_2,expected", [(0, 99, 100), (4, 0, 13), (2, 25, 53)])
 def test_ackermann(test_input_1, test_input_2, expected):
     assert ackermann(test_input_1, test_input_2) == expected
 
