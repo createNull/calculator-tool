@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Calculator tool</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='index-style.css') }}">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='calc.png') }}">
+</head>
+
+<body>
+    <header class="masthead clear">
+        <div class="centered">
+            <div class="site-branding">
+                <h1 class="site-title">Algorithm Calculator Tool</h1>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-area">
+        <div class="centered">
+            <section class="cards">
+                <article class="card">
+                    <a href="/Fibonacci">
+                        <div class="card-content">
+                            <h2>Fibonacci</h2>
+                            <p> In mathematics, the Fibonacci numbers, commonly denoted F(n) form a sequence,
+                                called the Fibonacci sequence, such that each number is the sum of the two
+                                preceding ones, starting from 0 and 1.</p>
+                            <p> This tool calculates F(n) - Fibonacci value for the given positive integer.</p>
+                            <p> Press this card to see how it works!</p>
+                        </div>
+                    </a>
+                </article>
+
+                <article class="card">
+                    <a href="/Ackermann">
+                        <div class="card-content">
+                            <h2>Ackermann</h2>
+                            <p> In computability theory, the Ackermann function, named after Wilhelm Ackermann,
+                                is one of the simplest and earliest-discovered examples of a total computable
+                                function that is not primitive recursive.</p>
+                            <p> This tool calculates Ackermann value for the given two positive integers.</p>
+                            <p> Press this card to see how it works!</p>
+                        </div>
+                    </a>
+                </article>
+
+                <article class="card">
+                    <a href="/Factorial">
+                        <div class="card-content">
+                            <h2>Factorial</h2>
+                            <p> In mathematics, the factorial of a positive integer n, denoted by n!, is the
+                                product of all positive integers less than or equal to n.
+                                The symbol for the factorial function is an exclamation mark after a number.</p>
+                            <p> This tool calculates Factorial value for the given positive integer.</p>
+                            <p> Press this card to see how it works!</p>
+                        </div>
+                    </a>
+                </article>
+            </section>
+        </div>
+    </main>
+</body>
+
+</html>
