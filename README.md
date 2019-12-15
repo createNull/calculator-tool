@@ -9,8 +9,7 @@ success) or an error message (in case of failure).
 
 
 ### Local setup & installation:
-*   Create and activate virtual environment
-[https://packaging.python.org/tutorials/installing-packages/#creating-virtual-environments]
+*   Create and activate [virtual environment](https://packaging.python.org/tutorials/installing-packages/#creating-virtual-environments)
 *   Install project requirements using pip
 ```sh
 $ pip install -r requirements.txt
