@@ -1,5 +1,5 @@
-from app.utils import *
 from pytest import mark, raises
+from app.utils import *
 
 
 @mark.parametrize("test_input,expected", [(0, 0), (1, 1), (10, 34)])
