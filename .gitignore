@@ -40,7 +40,8 @@ pip-log.txt
 pip-delete-this-directory.txt
 
 # IDE stuff
-*.idea
+.idea
+.vscode
 
 # Unit test / coverage reports
 htmlcov/
