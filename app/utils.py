@@ -55,7 +55,7 @@ def convert_to_positive_int(user_input):
     :return number: integer greater or equal to 0
     :return -1: if number is negative
 
-    :except TypeError, ValueError
+    :except TypeError, ValueError: returns -1
     """
     try:
         number = int(user_input)
@@ -70,7 +70,7 @@ def get_result_and_exec_time(algorithm_name, params):
     """Gets the result calculated with the given algorithm and its execution time in seconds.
 
     :param algorithm_name: string with the algorithm name as value
-    :param params: the variables that should be passed as
+    :param params: list of variables that should be passed as
                              parameters to the algorithm function
     :return result: integer if value equals an integer greater than 0
                     string "Please enter only integers, greater or equal to 0."
