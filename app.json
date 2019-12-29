@@ -1,0 +1,12 @@
+{
+  "name": "Calculator Tool",
+  "description": "Web server with a simple calculator tool",
+  "repository": "https://github.com/createNull/calculator-tool",
+  "keywords": [
+    "python",
+    "pytest",
+    "flask",
+    "docker",
+    "heroku"
+  ]
+}
