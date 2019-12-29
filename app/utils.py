@@ -63,7 +63,7 @@ def get_result(algorithm_name: str, params: List[int]) -> Union[str, List[int]]:
                             followed by error message
 
     """
-    err_msg = "Please enter only integers, greater or equal to 0."
+    err_msg = "Please input only positive integers"
     elements = []
 
     for param in params:
@@ -79,8 +79,9 @@ def get_result(algorithm_name: str, params: List[int]) -> Union[str, List[int]]:
     try:
         result = eval(f'{algorithm_name.lower()}(*elements)')  # algorithm function call
     except RecursionError as e:
-        return f'Please choose smaller integers. Error: {e}'
+        return f'Please input smaller integers, error: {e}'
     timer_end = timer()
+
     exec_time = timedelta(seconds=timer_end - timer_start).total_seconds()
     exec_time_with_decimals = f'{exec_time:.6f}'
     return [result, exec_time_with_decimals]

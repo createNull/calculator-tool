@@ -29,11 +29,11 @@ def test_factorial(test_input, expected):
                                                 ("Factorial", [-40]), ("Factorial", ["#&*"])])
 def test_invalid_input_error_message(algorithm_name, test_input):
     assert get_result(algorithm_name, test_input) == (
-        "Please enter only integers, greater or equal to 0."
+        "Please input only positive integers"
     )
 
 
 def test_recursion_error_message():
     assert get_result("Ackermann", [5, 6]) == (
-        "Please choose smaller integers. Error: maximum recursion depth exceeded in comparison"
+        "Please input smaller integers, error: maximum recursion depth exceeded in comparison"
     )

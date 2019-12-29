@@ -21,6 +21,7 @@ def algorithm_calculator(algorithm_name, result='', exec_time=''):
             result, exec_time = get_result(f'{algorithm_name}', user_input)
         except ValueError:
             result = get_result(f'{algorithm_name}', user_input)
+            return render_template('algorithm.html', name=algorithm_name, error_message=result)
 
     return render_template('algorithm.html', name=algorithm_name, result=result, exec_time=exec_time)
 
