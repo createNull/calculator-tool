@@ -12,13 +12,10 @@ is to provide a calculator tool for simple algorithms using input from user. The
 *   Install project requirements using pip
 ```sh
 $ pip install -r requirements.txt
-$ cd app
 ```
-*   Run following commands for Flask:
+*   Run application:
 ```sh
-$ export FLASK_APP=server.py
-$ export FLASK_ENV=development (debug mode)
-$ flask run
+$ python app/server.py
 ```
 *   Run tests
 ```sh
@@ -44,4 +41,11 @@ $ docker stop $(docker ps -a -q)
 $ docker rm $(docker ps -a -q)
 ```
 
+## Heroku Deployment
 
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/createNull/calculator-tool)
+
+
+## License
+
+The mighty MIT license. Please check `LICENSE` for more details.
