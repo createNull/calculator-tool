@@ -17,32 +17,26 @@ $ cd app
 *   Run following commands for Flask:
 ```sh
 $ export FLASK_APP=server.py
+$ export FLASK_ENV=development (debug mode)
 $ flask run
 ```
-*   Run Flask in debug mode
+*   Run tests
 ```sh
-$ export FLASK_ENV=development
-$ flask run
+$ pytest
 ```
 
 ### Docker setup & installation:
 *   Build docker image using Dockerfile
 ```sh
-$ docker build -t <DOCKER IMAGE> .
+$ docker build -t <DOCKER_IMAGE> .
 ```
-*   Run container
+*   Run app
 ```sh
-$ docker run -d --name <CONTAINER NAME> -p 5000:5000 <DOCKER IMAGE>
+$ docker run -d --name <CONTAINER_NAME> -p 5000:5000 <DOCKER_IMAGE>
 ```
-
-## Testing
-*   On local machine
+*   Run tests
 ```sh
-$ pytest
-```
-*   Inside docker container
-```sh
-$ docker exec <CONTAINER NAME> pytest 
+$ docker exec <CONTAINER_NAME> pytest 
 ```
 
 
