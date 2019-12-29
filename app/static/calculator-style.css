@@ -55,7 +55,7 @@ body .form-group input:focus {
   border-left: 3px solid #eb6f93;
 }
 
-body .form-group textarea {
+body .form-group .div-text {
   background: #29343a;
   font-family: 'Roboto', sans-sarif;
   font-size: 18px;
@@ -68,11 +68,8 @@ body .form-group textarea {
   border: none;
   border-left: 3px solid #008000;
   border-bottom: 0px;
-}
-
-body .form-group textarea:focus {
-  outline: none;
-  border-left: 3px solid #eb6f93;
+  overflow: auto;
+  pointer-events: none;
 }
 
 body .form-group button {
