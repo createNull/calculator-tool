@@ -1,4 +1,4 @@
-FROM python:3.8-alpine
+FROM python
 
 LABEL Author="Laurentiu Pop"
 LABEL E-mail="laur.pop.91@gmail.com"
