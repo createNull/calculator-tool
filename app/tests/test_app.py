@@ -26,7 +26,7 @@ def test_factorial(test_input, expected):
 @mark.parametrize("algorithm_name,test_input", [("Fibonacci", [-52]), ("Fibonacci", ['^&*']),
                                                 ("Ackermann", [-55, 24]), ("Ackermann", [17, -28]),
                                                 ("Ackermann", [76, '%$^']), ("Ackermann", ['abc', 85]),
-                                                ("Factorial)", [-40]), ("Factorial)", ["#&*"])])
+                                                ("Factorial", [-40]), ("Factorial", ["#&*"])])
 def test_invalid_input_error_message(algorithm_name, test_input):
     assert get_result(algorithm_name, test_input) == (
         "Please enter only integers, greater or equal to 0."
