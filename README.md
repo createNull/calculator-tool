@@ -5,6 +5,7 @@ is to provide a calculator tool for simple algorithms using input from user. The
 ## Prerequisites:
 *   Python3.x
 *   Docker
+*   Heroku
 
 
 ### Local setup & installation:
