@@ -1,6 +1,7 @@
-from flask import Flask, render_template, request
+import os
 
-from app.utils import get_result
+from flask import Flask, render_template, request
+from utils import get_result
 
 app = Flask(__name__)
 
@@ -24,3 +25,8 @@ def algorithm_calculator(algorithm_name, result='', exec_time=''):
             return render_template('algorithm.html', name=algorithm_name, error_message=result)
 
     return render_template('algorithm.html', name=algorithm_name, result=result, exec_time=exec_time)
+
+
+if __name__ == "__main__":
+    port = int(os.environ.get("PORT", 5000))
+    app.run(debug=True, host='0.0.0.0', port=port)
