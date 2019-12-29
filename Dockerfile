@@ -6,6 +6,7 @@ LABEL version="0.0.1"
 
 ENV FLASK_APP "server.py"
 ENV FLASK_ENV "development"
+ENV PORT 5000
 
 RUN git clone https://github.com/createNull/calculator-tool.git && \
     cd calculator-tool && \
@@ -16,4 +17,4 @@ EXPOSE 5000
 
 WORKDIR /calculator-tool/app
 
-CMD flask run --host=0.0.0.0
+CMD flask run --host=0.0.0.0:$PORT
