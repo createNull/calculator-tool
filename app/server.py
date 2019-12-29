@@ -1,5 +1,6 @@
 from flask import Flask, render_template, request
-from app.utils import get_result_and_exec_time
+
+from app.utils import get_result
 
 app = Flask(__name__)
 
@@ -16,7 +17,10 @@ def algorithm_calculator(algorithm_name, result='', exec_time=''):
         user_input = [request.form.get('parameter')]
         if algorithm_name == 'Ackermann':
             user_input.append(request.form.get('second-parameter'))
-        result, exec_time = get_result_and_exec_time(f'{algorithm_name}', user_input)
+        try:
+            result, exec_time = get_result(f'{algorithm_name}', user_input)
+        except ValueError:
+            result = get_result(f'{algorithm_name}', user_input)
 
     return render_template('algorithm.html', name=algorithm_name, result=result, exec_time=exec_time)
 

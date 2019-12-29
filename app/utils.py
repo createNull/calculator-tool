@@ -1,8 +1,9 @@
 from datetime import timedelta
 from timeit import default_timer as timer
+from typing import List, Union
 
 
-def fibonacci(n):
+def fibonacci(n: int) -> int:
     """Iterative implementation of Fibonacci algorithm.
     fibonacci(0) = 0
     fibonacci(1) = 1
@@ -21,7 +22,7 @@ def fibonacci(n):
         return sec
 
 
-def ackermann(m, n):
+def ackermann(m: int, n: int) -> int:
     """Recursive implementation of Ackermann algorithm.
 
     :param m: positive integer
@@ -35,7 +36,7 @@ def ackermann(m, n):
         return ackermann(m - 1, ackermann(m, n - 1))
 
 
-def factorial(n):
+def factorial(n: int) -> int:
     """Iterative implementation of factorial algorithm.
     factorial(0) = 1
     factorial(1) = 1
@@ -48,33 +49,14 @@ def factorial(n):
     return result
 
 
-def convert_to_positive_int(user_input):
-    """User input is converted from a string to an integer greater or equal to 0.
-
-    :param user_input: string of characters given by user
-    :return number: integer greater or equal to 0
-    :return -1: if number is negative
-
-    :except TypeError, ValueError: returns -1
-    """
-    try:
-        number = int(user_input)
-        if number < 0:
-            return -1
-        return number
-    except (TypeError, ValueError):
-        return -1
-
-
-def get_result_and_exec_time(algorithm_name, params):
+def get_result(algorithm_name: str, params: List[int]) -> Union[str, List[int]]:
     """Gets the result calculated with the given algorithm and its execution time in seconds.
 
     :param algorithm_name: string with the algorithm name as value
     :param params: list of variables that should be passed as
                              parameters to the algorithm function
-    :return result: integer if value equals an integer greater than 0
-                    string "Please enter only integers, greater or equal to 0."
-                    if value equals -1
+
+    :return result: list for valid input or error message for invalid input
     :return exec_time_with_decimals: float with 6 decimals
 
     :except RecursionError: returns string 'Please choose smaller integers.'
@@ -83,20 +65,22 @@ def get_result_and_exec_time(algorithm_name, params):
     """
     err_msg = "Please enter only integers, greater or equal to 0."
     elements = []
-    exec_time_with_decimals = ''
 
     for param in params:
-        value = convert_to_positive_int(param)
-        if value == -1:
-            return err_msg, exec_time_with_decimals
-        elements.append(value)
+        try:
+            num = int(param)
+            if num < 0:
+                return err_msg
+        except (ValueError, TypeError):
+            return err_msg
+        elements.append(num)
 
     timer_start = timer()
     try:
         result = eval(f'{algorithm_name.lower()}(*elements)')  # algorithm function call
     except RecursionError as e:
-        return f'Please choose smaller integers. Error: {e}', exec_time_with_decimals
+        return f'Please choose smaller integers. Error: {e}'
     timer_end = timer()
     exec_time = timedelta(seconds=timer_end - timer_start).total_seconds()
     exec_time_with_decimals = f'{exec_time:.6f}'
-    return result, exec_time_with_decimals
+    return [result, exec_time_with_decimals]
