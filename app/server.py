@@ -24,6 +24,3 @@ def algorithm_calculator(algorithm_name, result='', exec_time=''):
             return render_template('algorithm.html', name=algorithm_name, error_message=result)
 
     return render_template('algorithm.html', name=algorithm_name, result=result, exec_time=exec_time)
-
-
-

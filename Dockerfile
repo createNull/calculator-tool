@@ -1,4 +1,4 @@
-FROM python
+FROM python:3.8-slim
 
 LABEL Author="Laurentiu Pop"
 LABEL E-mail="laur.pop.91@gmail.com"
@@ -9,8 +9,8 @@ ENV FLASK_ENV "development"
 
 RUN git clone https://github.com/createNull/calculator-tool.git && \
     cd calculator-tool && \
-    pip install --upgrade pip && \
-    pip install -r requirements.txt
+    pip install --no-cache-dir --upgrade pip && \
+    pip install --no-cache-dir -r requirements.txt
 
 EXPOSE 5000
 
