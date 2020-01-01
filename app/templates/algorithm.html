@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='calculator-style.css') }}">
+    <link href="{{url_for('static', filename='algorithm.css') }}" rel="stylesheet" type="text/css">
     <link rel="shortcut icon" href="{{ url_for('static', filename='calc.png') }}">
 
   <title>Calculator tool</title>
@@ -41,10 +41,10 @@
 
         <div class="form-group">
             <h4>Output:</h4>
-            <div class="div-text" contentEditable> {{ result }}</div>
+            <textarea rows="10"> {{ result }} </textarea>
 
             <h4>Execution time (seconds):</h4>
-            <div class="div-text" contentEditable> {{ exec_time }}</div>
+            <textarea> {{ exec_time }} </textarea>
         </div>
 
         <div class="form-group">

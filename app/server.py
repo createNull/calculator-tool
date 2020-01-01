@@ -1,7 +1,7 @@
 import os
 
 from flask import Flask, render_template, request, redirect
-from utils import get_result
+from utils import run_algorithm
 
 app = Flask(__name__)
 
@@ -12,7 +12,7 @@ def home():
 
 
 @app.route('/<algorithm_name>/', methods=["GET", "POST"])
-def algorithm_calculator(algorithm_name):
+def algorithm_calculator(algorithm_name: str):
     if request.method == 'GET' and algorithm_name in ("Fibonacci", "Ackermann", "Factorial"):
         return render_template('algorithm.html', name=algorithm_name)
 
@@ -20,16 +20,14 @@ def algorithm_calculator(algorithm_name):
         user_input = [request.form.get('parameter')]
         if algorithm_name == 'Ackermann':
             user_input.append(request.form.get('second-parameter'))
-        try:
-            result, exec_time = get_result(f'{algorithm_name}', user_input)
-        except ValueError:
-            result = get_result(f'{algorithm_name}', user_input)
-            return render_template('algorithm.html', name=algorithm_name, error_message=result)
 
-        return render_template('algorithm.html', name=algorithm_name, result=result, exec_time=exec_time)
+        result, exec_time = run_algorithm(f'{algorithm_name}', user_input)
+        if exec_time:
+            return render_template('algorithm.html', name=algorithm_name, result=result, exec_time=exec_time)
+        return render_template('algorithm.html', name=algorithm_name, error_message=result)
 
     else:
-        return redirect("/"), 404, {"Refresh": "3; url=/"}
+        return redirect('/'), 404, {"Refresh": "3; url=/"}
 
 
 if __name__ == "__main__":

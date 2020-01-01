@@ -34,7 +34,8 @@ body .calculator {
 
 body .form-group {
   position: relative;
-  margin-bottom: 20px;
+  margin-top: 30px;
+  margin-bottom: 10px;
 }
 
 body .form-group input {
@@ -42,7 +43,7 @@ body .form-group input {
   font-family: 'Roboto', sans-sarif;
   font-size: 18px;
   color: #fff;
-  padding: 15px 15px 15px 15px;
+  padding: 15px;
   display: block;
   width: 100%;
   border: none;
@@ -54,17 +55,21 @@ body .form-group input:focus {
   border-left: 3px solid #eb6f93;
 }
 
-body .form-group .div-text {
+body .form-group textarea {
   background: #29343a;
   font-family: 'Roboto', sans-sarif;
   font-size: 18px;
   color: #fd8383;
-  padding: 15px 15px 15px 15px;
+  padding: 15px;
   display: block;
   width: 100%;
   border: none;
   border-left: 3px solid #008000;
-  pointer-events: none;
+}
+
+body .form-group textarea:focus {
+  outline: none;
+  border-left: 3px solid #eb6f93;
 }
 
 body .form-group button {
