@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="{{url_for('static', filename='error.css') }}" rel="stylesheet" type="text/css">
+    <link href="{{ url_for('static', filename='calc.png') }}" rel="shortcut icon">
+
+    <title>Error page</title>
+</head>
+<body>
+<h1>{{ error_code }}</h1>
+<p class="zoom-area"> {{ error_text }} </p>
+<section class="error-container">
+    <span>{{ error_code[0] }}</span>
+    <span><span class="screen-reader-text">{{ error_code[1] }}</span></span>
+    <span>{{ error_code[2] }}</span>
+</section>
+</body>
+</html>
