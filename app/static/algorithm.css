@@ -1,8 +1,9 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:300");
+
 body {
   background: #263238;
   font-family: sans-serif;
   line-height: 1.4;
-
 }
 
 .centered {
@@ -24,7 +25,7 @@ body {
   color: black;
 }
 
-body .calculator {
+.calculator {
   width: auto;
   margin: 30px;
   display: block;
@@ -32,70 +33,48 @@ body .calculator {
   padding: 50px 50px 50px 50px;
 }
 
-body .form-group {
+.form-group {
   position: relative;
   margin-top: 30px;
   margin-bottom: 10px;
 }
 
-body .form-group input {
-  background: #29343a;
-  font-family: 'Roboto', sans-sarif;
+.form-group input, textarea, h4, button, a {
+  font-family: "Roboto", sans-sarif;
   font-size: 18px;
   color: #fff;
+  border: none;
+}
+
+.form-group input, textarea {
+  background: #29343a;
   padding: 15px;
   display: block;
   width: 100%;
-  border: none;
   border-left: 3px solid #008000;
+
+    &:focus {
+      outline: none;
+      border-left: 3px solid #eb6f93;
+    }
 }
 
-body .form-group input:focus {
-  outline: none;
-  border-left: 3px solid #eb6f93;
-}
-
-body .form-group textarea {
-  background: #29343a;
-  font-family: 'Roboto', sans-sarif;
-  font-size: 18px;
+.form-group textarea {
   color: #fd8383;
-  padding: 15px;
-  display: block;
-  width: 100%;
-  border: none;
-  border-left: 3px solid #008000;
 }
 
-body .form-group textarea:focus {
-  outline: none;
-  border-left: 3px solid #eb6f93;
-}
-
-body .form-group button {
-  font-family: 'Roboto', sans-sarif;
-  font-size: 18px;
-  color: #fff;
+.form-group button, a {
   background: #008000;
   border: 0px;
   padding: 10px 20px;
   transition: 0.5s ease all;
 }
 
-body .form-group h4 {
-  font-family: 'Roboto', sans-sarif;
-  font-size: 18px;
+.form-group h4 {
   color: #dfa9dc;
 }
 
-body .form-group a {
-  font-family: 'Roboto', sans-sarif;
-  font-size: 18px;
-  text-decoration: none;
-  color: #fff;
+.form-group a {
   background: #da261f;
-  border: 0px;
-  padding: 10px 20px;
-  cursor: pointer;
-  transition: 0.5s ease all;
+  text-decoration: none;
 }
