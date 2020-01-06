@@ -5,9 +5,10 @@
     <link href="{{url_for('static', filename='algorithm.css') }}" rel="stylesheet" type="text/css">
     <link rel="shortcut icon" href="{{ url_for('static', filename='calc.png') }}">
 
-  <title>Calculator tool</title>
+    <title>Algorithm Calculator tool</title>
 
     <link rel='stylesheet' type="text/css" href='https://fonts.googleapis.com/css?family=Roboto:300'>
+
 </head>
 
 <body>
@@ -32,24 +33,26 @@
                 <input name="second-parameter" placeholder="Second number" required type="number">
             </div>
             {% endif %}
-            <div style="color:red"> {{ error_message }}</div>
+            <div style="color:red">{{ error_message }}</div>
 
             <div class="form-group">
                 <button type="submit">Calculate</button>
             </div>
+
+            <div class="form-group">
+                <h4>Output:</h4>
+                <textarea rows="10">{{ result }}</textarea>
+
+                <h4>Execution time (seconds):</h4>
+                <textarea>{{ exec_time }}</textarea>
+            </div>
+
+            <div class="form-group">
+                <a class="" href="/">Back</a>
+            </div>
+
         </form>
 
-        <div class="form-group">
-            <h4>Output:</h4>
-            <textarea rows="10"> {{ result }} </textarea>
-
-            <h4>Execution time (seconds):</h4>
-            <textarea> {{ exec_time }} </textarea>
-        </div>
-
-        <div class="form-group">
-            <a href="/" class="">Back</a>
-        </div>
     </div>
 </body>
 

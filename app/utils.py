@@ -1,4 +1,3 @@
-from datetime import timedelta
 from timeit import default_timer as timer
 from typing import Tuple, List, Any
 
@@ -68,7 +67,7 @@ def run_algorithm(algorithm_name: str, params: List[int]) -> Tuple[Any, str]:
     err_msg = "Please input only positive integers"
     elements = []
 
-    # validate parameters
+    # validate input from user
     for param in params:
         try:
             num = int(param)
@@ -84,7 +83,7 @@ def run_algorithm(algorithm_name: str, params: List[int]) -> Tuple[Any, str]:
         result = eval(f'{algorithm_name.lower()}(*elements)')  # algorithm function call
         timer_end = timer()
 
-        exec_time = timedelta(seconds=timer_end - timer_start).total_seconds()
+        exec_time = timer_end - timer_start
         exec_time_with_decimals = f'{exec_time:.6f}'
 
         return result, exec_time_with_decimals

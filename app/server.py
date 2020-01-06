@@ -21,7 +21,7 @@ def algorithm_calculator(algorithm_name: str):
         if algorithm_name == 'Ackermann':
             user_input.append(request.form.get('second-parameter'))
 
-        result, exec_time = run_algorithm(f'{algorithm_name}', user_input)
+        result, exec_time = run_algorithm(algorithm_name, user_input)
         if exec_time:
             return render_template('algorithm.html', name=algorithm_name, result=result, exec_time=exec_time)
         return render_template('algorithm.html', name=algorithm_name, error_message=result)
