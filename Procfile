@@ -1,1 +1,1 @@
-web: gunicorn algo-calculator:app --timeout 15
+web: gunicorn calculator-tool:app --timeout 15
