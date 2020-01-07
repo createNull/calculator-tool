@@ -74,6 +74,7 @@ body {
     margin-top: 0;
     margin-bottom: .5em;
     font-weight: normal;
+    text-align: center;
 }
 
 .card-content p {
