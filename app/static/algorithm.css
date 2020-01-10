@@ -19,8 +19,9 @@ body {
 
 .calculator {
   display: flex;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
   padding: 4rem;
+  margin-bottom: 2.2rem;
 }
 
 .form-group {

@@ -1,10 +1,10 @@
 .footer {
-  /* position: fixed; */
+  position: absolute;
   width: 100%;
   /* margin: 3rem 0 0; */
   background: #0c0420;
   padding: 2rem 0;
-
+  bottom: 0;
 }
 
 .footer-text {
