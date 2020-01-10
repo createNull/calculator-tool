@@ -4,32 +4,32 @@
 <head>
     <link href="{{url_for('static', filename='algorithm.css') }}" rel="stylesheet" type="text/css">
     <link rel="shortcut icon" href="{{ url_for('static', filename='calc.png') }}">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
+
 
     <title>Algorithm Calculator tool</title>
 </head>
 
 <body>
-    <header class="masthead clear">
-        <div class="centered">
-            <div class="site-branding">
-                <h1 class="site-title">{{ name }} Calculator</h1>
-            </div>
+<header>
+    <div class="header">
+        <h1 class="site-title">{{ name }} Calculator</h1>
+    </div>
+</header>
+
+<div class="calculator">
+    <form action="/{{ name }}/" method="post">
+        <div class="form-group">
+            <h4>Input:</h4>
+            <input name="parameter" placeholder="Number" required type="number">
         </div>
-    </header>
 
-    <div class="calculator">
-        <form action="/{{ name }}/" method="post">
-            <div class="form-group">
-                <h4>Input:</h4>
-                <input name="parameter" placeholder="Number" required type="number">
-            </div>
-
-            {% if name=='Ackermann' %}
+        {% if name=='Ackermann' %}
             <div class="form-group">
                 <input name="second-parameter" placeholder="Second number" required type="number">
             </div>
             {% endif %}
-            <div style="color:red">{{ error_message }}</div>
+        <div class="error-message">{{ error_message }}</div>
 
             <div class="form-group">
                 <button type="submit">Calculate</button>
@@ -37,17 +37,23 @@
 
             <div class="form-group">
                 <h4>Output:</h4>
-                <textarea rows="10">{{ result }}</textarea>
+                <textarea rows="5">{{ result }}</textarea>
 
                 <h4>Execution time (seconds):</h4>
                 <textarea>{{ exec_time }}</textarea>
             </div>
 
-            <div class="form-group">
-                <a class="" href="/">Back</a>
-            </div>
-        </form>
-    </div>
+        <div class="form-group">
+            <a class="" href="/">Back</a>
+        </div>
+    </form>
+</div>
+
+<footer class="footer">
+    <p class="footer-text">
+        Copyright © 2020 Laurențiu Pop. All rights reserved.
+    </p>
+</footer>
 </body>
 
 </html>

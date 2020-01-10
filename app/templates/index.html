@@ -2,64 +2,79 @@
 <html lang="en">
 
 <head>
-  <title>Calculator tool</title>
+    <title>Calculator tool</title>
     <link href="{{ url_for('static', filename='index.css') }}" rel="stylesheet" type="text/css">
     <link rel="shortcut icon" href="{{ url_for('static', filename='calc.png') }}">
 </head>
 
 <body>
-    <header class="masthead clear">
-        <div class="centered">
-            <div class="site-branding">
-                <h1 class="site-title">Algorithm Calculator Tool</h1>
+<!--    <header class="masthead clear">-->
+<!--        <div class="centered">-->
+<!--            <div class="site-branding">-->
+<!--                <h1 class="site-title">Algorithm Calculator Tool</h1>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </header>-->
+<header>
+    <div class="header">
+        <h1 class="site-title">Algorithm Calculator Tool</h1>
+    </div>
+</header>
+
+<div class="cards">
+    <div class="cards-item">
+        <div class="card">
+            <div class="card-image card-image1"></div>
+            <div class="card-content">
+                <div class="card-title">Fibonacci</div>
+                <p class="card-text">In mathematics, the Fibonacci numbers, commonly denoted F(n) form a sequence,
+                    called the Fibonacci sequence, such that each number is the sum of the two preceding ones,
+                    starting from 0 and 1.
+                </p>
+                <p class="card-text"> This tool calculates F(n) - Fibonacci value for a given positive integer.
+                </p>
+                <a class="cards-button button-block" href="/Fibonacci">Open Fibonacci Calculator</a>
             </div>
         </div>
-    </header>
+    </div>
 
-    <main class="main-area">
-        <div class="centered">
-            <section class="cards">
-                <article class="card">
-                    <a href="/Fibonacci">
-                        <div class="card-content">
-                            <h2>Fibonacci</h2>
-                            <p> In mathematics, the Fibonacci numbers, commonly denoted F(n) form a sequence,
-                                called the Fibonacci sequence, such that each number is the sum of the two
-                                preceding ones, starting from 0 and 1.</p>
-                            <p> This tool calculates F(n) - Fibonacci value for the given positive integer.</p>
-                            <p> Press this card to see how it works!</p>
-                        </div>
-                    </a>
-                </article>
-
-                <article class="card">
-                    <a href="/Ackermann">
-                        <div class="card-content">
-                            <h2>Ackermann</h2>
-                            <p> In computability theory, the Ackermann function, named after Wilhelm Ackermann,
-                                is one of the simplest and earliest-discovered examples of a total computable
-                                function that is not primitive recursive.</p>
-                            <p> This tool calculates Ackermann value for the given two positive integers.</p>
-                            <p> Press this card to see how it works!</p>
-                        </div>
-                    </a>
-                </article>
-
-                <article class="card">
-                    <a href="/Factorial">
-                        <div class="card-content">
-                            <h2>Factorial</h2>
-                            <p> In mathematics, the factorial of a positive integer n, denoted by n!, is the
-                                product of all positive integers less than or equal to n.
-                                The symbol for the factorial function is an exclamation mark after a number.</p>
-                            <p> This tool calculates Factorial value for the given positive integer.</p>
-                            <p> Press this card to see how it works!</p>
-                        </div>
-                    </a>
-                </article>
-            </section>
+    <div class="cards-item">
+        <div class="card">
+            <div class="card-image card-image1"></div>
+            <div class="card-content">
+                <div class="card-title">Ackermann</div>
+                <p class="card-text">In computability theory, the Ackermann function, named after Wilhelm Ackermann,
+                    is one of the simplest and earliest-discovered examples of a total computable function that is
+                    not primitive recursive.
+                </p>
+                <p class="card-text"> This tool calculates A(m, n) - Ackermann value for two given positive
+                    integers.
+                </p>
+                <a class="cards-button button-block" href="/Ackermann">Open Ackermann Calculator</a>
+            </div>
         </div>
-    </main>
+    </div>
+
+    <div class="cards-item">
+        <div class="card">
+            <div class="card-image card-image1"></div>
+            <div class="card-content">
+                <div class="card-title">Factorial</div>
+                <p class="card-text">In mathematics, the factorial of a positive integer n, denoted by n!, is the
+                    product of all positive integers less than or equal to n. The symbol for the factorial function
+                    is an exclamation mark after a number. </p>
+                <p class="card-text"> This tool calculates F(n) - Factorial value for a given positive integer.
+                </p>
+                <a class="cards-button button-block" href="/Factorial">Open Factorial Calculator</a>
+            </div>
+        </div>
+    </div>
+</div>
+<footer class="footer">
+    <p class="footer-text">
+        Copyright © 2020 Laurențiu Pop. All rights reserved.
+    </p>
+</footer>
 </body>
 
 </html>
