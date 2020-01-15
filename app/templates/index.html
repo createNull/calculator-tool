@@ -2,72 +2,83 @@
 <html lang="en">
 
 <head>
-    <title>Calculator tool</title>
-    <link href="{{ url_for('static', filename='index.css') }}" rel="stylesheet" type="text/css">
+    <meta charset="utf-8"/>
+    <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+    <meta content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+          name="viewport"/>
     <link rel="shortcut icon" href="{{ url_for('static', filename='calc.png') }}">
+    <link href="{{ url_for('static', filename='index.css') }}" rel="stylesheet">
+
+    <title>Calculator tool</title>
+    <meta content="[algorithm], [calculator], [fibonacci], [ackermann], [factorial]" name="keywords"/>
+    <meta content="[Algorithm Calculator Tool]" name="description"/>
+
+    <!-- Required librarys -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css" rel="stylesheet">
+    <link href='https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/css/swiper.min.css' rel='stylesheet'>
 </head>
 
 <body>
-<header>
-    <div class="header">
-        <h1 class="site-title">Algorithm Calculator Tool</h1>
-    </div>
-</header>
-
-<div class="cards">
-    <div class="cards-item">
-        <div class="card">
-            <div class="card-image card-image1"></div>
-            <div class="card-content">
-                <div class="card-title">Fibonacci</div>
-                <p class="card-text">In mathematics, the Fibonacci numbers, commonly denoted F(n) form a sequence,
+<!-- partial:index.partial.html -->
+<div class="blog-slider">
+    <div class="blog-slider__wrp swiper-wrapper">
+        <div class="blog-slider__item swiper-slide">
+            <div class="blog-slider__img">
+                <img alt="" src="{{ url_for('static', filename='fibonacci.jpg') }}">
+            </div>
+            <div class="blog-slider__content">
+                <!--         <span class="blog-slider__code">26 December 2019</span> -->
+                <div class="blog-slider__title">Fibonacci</div>
+                <div class="blog-slider__text">In mathematics, the Fibonacci numbers, commonly denoted F(n) form a
+                    sequence,
                     called the Fibonacci sequence, such that each number is the sum of the two preceding ones,
-                    starting from 0 and 1.
-                </p>
-                <p class="card-text"> This tool calculates F(n) - Fibonacci value for a given positive integer.
-                </p>
-                <a class="cards-button button-block" href="/Fibonacci">Open Fibonacci Calculator</a>
+                    starting from 0
+                    and 1.
+                </div>
+                <a class="blog-slider__button" href="/Fibonacci">Try me! </a>
             </div>
         </div>
-    </div>
-
-    <div class="cards-item">
-        <div class="card">
-            <div class="card-image card-image1"></div>
-            <div class="card-content">
-                <div class="card-title">Ackermann</div>
-                <p class="card-text">In computability theory, the Ackermann function, named after Wilhelm Ackermann,
+        <div class="blog-slider__item swiper-slide">
+            <div class="blog-slider__img">
+                <img alt="" src="{{ url_for('static', filename='ackermann.jpg') }}">
+            </div>
+            <div class="blog-slider__content">
+                <!--         <span class="blog-slider__code">26 December 2019</span> -->
+                <div class="blog-slider__title">Ackermann</div>
+                <div class="blog-slider__text">In computability theory, the Ackermann function, named after Wilhelm
+                    Ackermann,
                     is one of the simplest and earliest-discovered examples of a total computable function that is
-                    not primitive recursive.
-                </p>
-                <p class="card-text"> This tool calculates A(m, n) - Ackermann value for two given positive
-                    integers.
-                </p>
-                <a class="cards-button button-block" href="/Ackermann">Open Ackermann Calculator</a>
+                    not primitive
+                    recursive.
+                </div>
+                <a class="blog-slider__button" href="/Ackermann">Try me !</a>
             </div>
         </div>
-    </div>
 
-    <div class="cards-item">
-        <div class="card">
-            <div class="card-image card-image1"></div>
-            <div class="card-content">
-                <div class="card-title">Factorial</div>
-                <p class="card-text">In mathematics, the factorial of a positive integer n, denoted by n!, is the
+        <div class="blog-slider__item swiper-slide">
+            <div class="blog-slider__img">
+                <img alt="" src="{{ url_for('static', filename='factorial.jpg') }}">
+            </div>
+            <div class="blog-slider__content">
+                <!--         <span class="blog-slider__code">26 December 2019</span> -->
+                <div class="blog-slider__title">Factorial</div>
+                <div class="blog-slider__text">In mathematics, the factorial of a positive integer n, denoted by n!,
+                    is the
                     product of all positive integers less than or equal to n. The symbol for the factorial function
-                    is an exclamation mark after a number. </p>
-                <p class="card-text"> This tool calculates F(n) - Factorial value for a given positive integer.
-                </p>
-                <a class="cards-button button-block" href="/Factorial">Open Factorial Calculator</a>
+                    is an
+                    exclamation mark after a number.
+                </div>
+                <a class="blog-slider__button" href="/Factorial">Try me !</a>
             </div>
         </div>
+
     </div>
+    <div class="blog-slider__pagination"></div>
 </div>
-<footer class="footer">
-    <p class="footer-text">
-        Copyright © 2020 Laurențiu Pop. All rights reserved.
-    </p>
-</footer>
+<!-- partial -->
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/js/swiper.min.js'></script>
+<script src="{{ url_for('static', filename='script.js') }}"></script>
 </body>
 
 </html>

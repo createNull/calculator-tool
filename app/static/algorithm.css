@@ -1,86 +1,76 @@
-@import 'header.css';
-@import 'footer.css';
-@import url("https://fonts.googleapis.com/css?family=Roboto:300");
+@import url("https://fonts.googleapis.com/css?family=Fira+Sans:400,500,600,700,800");
 
-*,
-*:before,
-*:after {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+/* @use postcss-preset-env {
+  stage: 0
+} */
+
+* {
+  color: #fff;
+  font-size: 18px;
 }
 
 body {
-  background-image: linear-gradient(135deg,
-      #2c2a30 0%,
-      #0c0420 100%);
-  font-family: sans-serif;
+  background: linear-gradient(135deg, #fd3838 0%, #4527f0 100%);
+  font-family: 'Fira Sans', sans-serif;
+  min-height: 100vh;
+  display: grid;
+  align-items: center;
+  margin: .5rem;
 }
 
-.calculator {
+h1 {
+  padding: 1em 0;
+  font-size: 2.5em;
+  text-align: center;
+}
+
+form {
   display: flex;
-  /* flex-wrap: wrap; */
-  padding: 4rem;
-  margin-bottom: 2.2rem;
+  flex-wrap: wrap;
 }
 
-.form-group {
-  margin-bottom: 3%;
-  justify-content: center;
+form>input {
+  flex: 1 1 10ch;
+  margin: .5rem;
 }
 
-.form-group input,
+input,
 textarea,
-h4,
-button,
 a {
-  font-family: "Roboto", sans-sarif;
-  font-size: 18px;
-  color: #fff;
   border: none;
-  padding: 1rem;
+  background: #0f0835;
+  border-radius: .25rem;
+  padding: .75rem 1rem;
+  transition: all .3s;
 }
 
-.form-group input, textarea {
-  background: #0c0420;
-  display: flex;
-  width: 150%;
-  border-left: 3px solid #008000;
-
-  &:focus {
-    outline: none;
-    border-left: 3px solid #e74c3c;
-  }
-}
-
-.form-group button,
+input[type="submit"],
 a {
-  background: #008000;
-  border: 1rem;
-  border-radius: 0.5rem;
-  padding: 0.75rem;
-  transition: 0.5s ease all;
+  background: #0f880f;
+  box-shadow: 0 .75rem .5rem -.5rem hsl(0 50% 80%);
+  border-radius: 50px;
+  letter-spacing: 1px;
+  font-weight: 500;
   cursor: pointer;
 }
 
-.form-group textarea {
-  margin-bottom: 1rem;
-}
-.form-group h4 {
-  color: #dfa9dc;
-  margin: 0;
-  padding: 1rem 1rem 1rem 0;
 
+textarea,
+p,
+a {
+  margin: .5rem;
 }
 
-.form-group a {
+p {
+  margin-top: 0;
+}
+
+a {
   background: #e74c3c;
+  box-shadow: 0 .75rem .5rem -.5rem hsl(0 50% 80%);
   text-decoration: none;
-  /* margin-top: 1rem; */
-}
-
-.error-message {
-  color: #e74c3c;
-  margin-top: -0.65rem;
-  margin-bottom: 1rem;
+  text-align: center;
+  border-radius: 50px;
+  letter-spacing: 1px;
+  font-weight: 500;
 }
