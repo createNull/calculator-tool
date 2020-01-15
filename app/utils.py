@@ -84,7 +84,7 @@ def run_algorithm(algorithm_name: str, params: List[int]) -> Tuple[Any, str]:
         timer_end = timer()
 
         exec_time = timer_end - timer_start
-        exec_time_with_decimals = f'{exec_time:.6f}'
+        exec_time_with_decimals = f'Execution time (seconds):  {exec_time:.6f}'
 
         return result, exec_time_with_decimals
     except RecursionError as e:
