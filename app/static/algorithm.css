@@ -1,12 +1,9 @@
 @import url("https://fonts.googleapis.com/css?family=Fira+Sans:400,500,600,700,800");
 
-/* @use postcss-preset-env {
-  stage: 0
-} */
 
 * {
   color: #fff;
-  font-size: 18px;
+  font-size: 2vh;
 }
 
 body {
@@ -16,10 +13,10 @@ body {
   display: grid;
   align-items: center;
   margin: .5rem;
+  justify-content: center;
 }
 
 h1 {
-  padding: 1em 0;
   font-size: 2.5em;
   text-align: center;
 }
@@ -30,7 +27,7 @@ form {
 }
 
 form>input {
-  flex: 1 1 10ch;
+  flex: 1 1 100ch;
   margin: .5rem;
 }
 
@@ -41,7 +38,7 @@ a {
   background: #0f0835;
   border-radius: .25rem;
   padding: .75rem 1rem;
-  transition: all .3s;
+  transition: all .4s;
 }
 
 input[type="submit"],
