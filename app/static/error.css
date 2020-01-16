@@ -156,8 +156,8 @@
 
 body {
   background-color: #fff;
-  margin-top: 20%;
-  margin-bottom: 50px;
+  margin-top: 20vh;
+  margin-bottom: 5vh;
 }
 
 html,
@@ -176,8 +176,8 @@ h1 {
 }
 
 .zoom-area {
-  max-width: 490px;
+  color: #000;
   margin: 30px auto 30px;
-  font-size: 3vh;
+  font-size: 2vh;
   text-align: center;
 }
