@@ -12,7 +12,7 @@ def home():
 
 
 @app.route('/<algorithm_name>/', methods=["GET", "POST"])
-@timeout(10)
+@timeout(3)
 def algorithm_calculator(algorithm_name: str):
     if request.method == 'GET' and algorithm_name in ("Fibonacci", "Ackermann", "Factorial"):
         return render_template('algorithm.html', name=algorithm_name)
