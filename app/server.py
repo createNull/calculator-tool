@@ -1,6 +1,7 @@
 from flask import Flask, render_template, request, abort
 from timeout_decorator import timeout, TimeoutError
-from utils import run_algorithm
+
+from app.utils import run_algorithm
 
 app = Flask(__name__)
 
@@ -32,16 +33,18 @@ def algorithm_calculator(algorithm_name: str):
 
 @app.errorhandler(404)
 def handle_file_not_found(e):
-    error_code = '404 File Not Found'
+    error_code = '404'
+    error_name = 'File Not Found'
     error_text = "Oops, the page you're looking for doesn't exist."
-    return render_template('error.html', error_code=error_code, error_text=error_text)
+    return render_template('error.html', error_code=error_code, error_name=error_name, error_text=error_text)
 
 
 @app.errorhandler(TimeoutError)
 def handle_timeout(e):
-    error_code = '500 Request Timed Out'
+    error_code = '408'
+    error_name = 'Request Timeout'
     error_text = 'Looks like the server is taking too long to respond, please try again later.'
-    return render_template('error.html', error_code=error_code, error_text=error_text)
+    return render_template('error.html', error_code=error_code, error_name=error_name, error_text=error_text)
 
 
 if __name__ == "__main__":

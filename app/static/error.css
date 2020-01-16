@@ -155,7 +155,8 @@
 }
 
 body {
-  background-color: #263238;
+  background-color: #fff;
+  margin-top: 20%;
   margin-bottom: 50px;
 }
 
@@ -171,11 +172,12 @@ textarea {
 h1 {
   text-align: center;
   margin: 30px 15px;
+  font-size: 5vh;
 }
 
 .zoom-area {
   max-width: 490px;
   margin: 30px auto 30px;
-  font-size: 19px;
+  font-size: 3vh;
   text-align: center;
 }
