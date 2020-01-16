@@ -1,8 +1,9 @@
 # Calculator Tool
 
-Web server developed in Flask which can be used across different web based applications and deployed with Docker in Heroku. This app purpose is to provide a calculator tool for simple algorithms using input from user. 
-The output will be the result of the algorithm in case of valid input. An error message will be shown in case of invalid input. 
-This tool also provides the execution time in seconds for each algorithm computation.
+Web application developed in Flask and deployed with Docker in Heroku.
+The purpose of this app is to provide a calculator tool for simple algorithms using some input from user.
+In case of valid input, the result of the algorithm together with its execution time in seconds will be displayed.
+Otherwise, an error message will pop-up.
 
 ## Prerequisites:
 *   Python 3.x
