@@ -17,9 +17,9 @@ Otherwise, an error message will pop-up.
 ```
 pip install -r requirements.txt
 ```
-*   Run application:
+*   Run application with gunicorn:
 ```
-python app/server.py
+gunicorn --chdir app server:app
 ```
 *   Run tests (coverage + reporting)
 ```
