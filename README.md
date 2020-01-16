@@ -5,13 +5,13 @@ The purpose of this app is to provide a calculator tool for simple algorithms us
 In case of valid input, the result of the algorithm together with its execution time in seconds will be displayed.
 Otherwise, an error message will pop-up.
 
-## Prerequisites:
+## Prerequisites
 *   Python 3.x
 *   Docker
 *   Heroku
 
 
-### Local setup & installation:
+### Local setup & installation
 *   Create and activate [virtual environment](https://packaging.python.org/tutorials/installing-packages/#creating-virtual-environments)
 *   Install project requirements using pip
 ```
@@ -26,7 +26,7 @@ gunicorn --chdir app server:app
 pytest
 ```
 
-### Docker setup & installation:
+### Docker setup & installation
 *   Build docker image using Dockerfile
 ```
 docker build -t <DOCKER_IMAGE> .
